@@ -1,0 +1,104 @@
+html, body{
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#root{
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*App.js CSS*/
+.container{
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("/src/images/FGO sky.jpg");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+
+/*ClassHeader.js CSS*/
+.class-tabs-container {
+  width: 80%;
+  max-width: 1200px; 
+  padding: 20px; 
+  margin: 30px auto; 
+}
+
+.class-tabs{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs{
+  margin: 5px;
+}
+
+.label{
+  padding: 10px;
+}
+
+.label.active{
+  border-radius: 3px;
+  background-color: rgb(110, 144, 155);
+}
+
+.label a{
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+
+/*ServantTable.js CSS*/
+.data-div{
+  width: 80%;
+  max-width: 1200px; 
+  max-height: 450px;
+  padding: 0;
+  margin: 30px auto; 
+
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.servantPicture{
+  width: 100%;
+}
+
+table{
+  width: 100%;
+  background-color: lightblue;
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+th, td{
+  padding: 15px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+td:first-child{
+  width: 10%;
+}
+
+thead th{
+  background-color: rgb(95, 149, 167);
+}
+
