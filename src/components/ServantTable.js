@@ -5,6 +5,12 @@ import { useTable } from "react-table";
 function ServantTable(){
     const {activeLabel, servant_classes} = useContext(Context);
     const [servantInfo, setServantInfo] = useState([]);
+
+    /* 
+        I don't think isLoading actually serves a purpose. I was going to make 
+        it do something but haven't gotten to it yet
+    */
+   
     const [isLoading, setIsLoading] = useState(true);
 
 

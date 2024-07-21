@@ -7,8 +7,10 @@ function Homepage(){
     return(
         <>
             <div className="container">
-                <ClassHeader/>
-                <ServantTable/>
+                <div className="main-page">
+                    <ClassHeader/>
+                    <ServantTable/>
+                </div>
             </div>
         </>
     );

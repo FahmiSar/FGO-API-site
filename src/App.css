@@ -11,7 +11,7 @@ html, body{
   overflow: hidden;
 }
 
-/*App.js CSS*/
+/*Homepage.js CSS*/
 .container{
   box-sizing: border-box;
   height: 100vh;
@@ -19,6 +19,10 @@ html, body{
   background-image: url("/src/images/FGO sky.jpg");
   background-size: cover;
   background-position: center bottom;
+}
+
+.main-page{
+  overflow-y: auto;
 }
 
 
@@ -71,7 +75,6 @@ html, body{
 
   display: flex;
   justify-content: center;
-  overflow-y: auto;
 }
 
 .servantPicture{
