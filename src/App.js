@@ -1,7 +1,9 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./components/Homepage";
 import React, {useState, createContext, useContext} from "react";
+
+import Homepage from "./pages/Homepage";
+import ServantPage from "./pages/ServantPage";
 
 export const Context = React.createContext();
 
@@ -18,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element = {<Homepage/>}/>
             <Route path="/Homepage" element = {<Homepage/>}/>
+            <Route path="/Servant/:name" element = {<ServantPage/>}/>
           </Routes>
     </Context.Provider>
   );

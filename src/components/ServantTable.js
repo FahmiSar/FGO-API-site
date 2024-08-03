@@ -1,6 +1,7 @@
 import React, {useContext, useState, useEffect, useMemo} from "react";
 import {Context} from "../App";
 import { useTable } from "react-table";
+import {Link} from "react-router-dom";
 
 function ServantTable(){
     const {activeLabel, servant_classes} = useContext(Context);
@@ -40,6 +41,7 @@ function ServantTable(){
             {
                 Header: "Name",
                 accessor: "name",
+                Cell: ({ value }) => <Link className="servantLink" to={`/Servant/${value.replace(/ /g, "_")}`}>{value}</Link>
             },
             {
                 Header: "Rarity",
