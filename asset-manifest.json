@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/FGO-API-site/static/css/main.89640f34.css",
-    "main.js": "/FGO-API-site/static/js/main.d82576ab.js",
-    "static/js/317.b0118a05.chunk.js": "/FGO-API-site/static/js/317.b0118a05.chunk.js",
+    "main.css": "/FGO-API-site/static/css/main.c4a4666e.css",
+    "main.js": "/FGO-API-site/static/js/main.940ab4ee.js",
+    "static/js/453.8da89bad.chunk.js": "/FGO-API-site/static/js/453.8da89bad.chunk.js",
     "static/media/FGO sky.jpg": "/FGO-API-site/static/media/FGO sky.503e971801d4f14dfe4b.jpg",
     "index.html": "/FGO-API-site/index.html",
-    "main.89640f34.css.map": "/FGO-API-site/static/css/main.89640f34.css.map",
-    "main.d82576ab.js.map": "/FGO-API-site/static/js/main.d82576ab.js.map",
-    "317.b0118a05.chunk.js.map": "/FGO-API-site/static/js/317.b0118a05.chunk.js.map"
+    "main.c4a4666e.css.map": "/FGO-API-site/static/css/main.c4a4666e.css.map",
+    "main.940ab4ee.js.map": "/FGO-API-site/static/js/main.940ab4ee.js.map",
+    "453.8da89bad.chunk.js.map": "/FGO-API-site/static/js/453.8da89bad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89640f34.css",
-    "static/js/main.d82576ab.js"
+    "static/css/main.c4a4666e.css",
+    "static/js/main.940ab4ee.js"
   ]
 }
