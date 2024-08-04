@@ -109,3 +109,53 @@ thead th{
   background-color: rgb(95, 149, 167);
 }
 
+/* ServantPage.js CSS */
+.characterBanner{
+  padding: 20px;
+  margin: 30px;
+  background-color: lightgray;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.pictureContainer{
+  width: 20%;
+  padding: 10px 20px;
+  margin: 10px 30px 10px 10px;
+  border-radius: 8px;
+  background-color: darkgray;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ascensionButton{
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  padding: 10px;
+
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ascensionButton:hover{
+  background-color: #e0e0e0;
+}
+
+.ascensionButton.active{
+  background-color: rgb(4, 4, 140);
+  color: white;
+}
+
+.ascensionPicture{
+  width: 100%;
+}
+

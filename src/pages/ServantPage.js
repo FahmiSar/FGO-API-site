@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 
+import Ascension from "../components/Ascension";
+
 function ServantPage(){
     const {name} = useParams(); // this'll get the "name" part of the URL
     const [data, setData] = useState(null);
@@ -34,12 +36,7 @@ function ServantPage(){
         <>
             <div className="container">
                 <div className="content">
-                    <p> WIP Literally</p>
-
-                    <h1>name: {servant.name}</h1>
-                    <h2>class: {servant.className}</h2>
-
-
+                    <Ascension servant = {servant}/>
                 </div>
             </div>
         </>
