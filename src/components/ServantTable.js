@@ -41,21 +41,28 @@ function ServantTable(){
             {
                 Header: "Name",
                 accessor: "name",
-                Cell: ({ value }) => <Link className="servantLink" to={`/Servant/${value.replace(/ /g, "_")}`}>{value}</Link>
+                Cell: ({ row }) => {
+                    const { name, id } = row.original; // Ensure the ID is available in your data
+                    return (
+                        <Link className="servantLink" to={`/Servant/${id}`}>
+                            {name}
+                        </Link>
+                    );
+                },
             },
             {
                 Header: "Rarity",
                 accessor: "rarity",
-                Cell: ({value}) => "⭐".repeat(value),
+                Cell: ({ value }) => "⭐".repeat(value),
             },
             {
                 Header: "ID",
                 accessor: "collectionNo",
-
             },
-        ], 
+        ],
         []
     );
+    
 
     /**
      * to explain this function we'll use the label Alter_Ego

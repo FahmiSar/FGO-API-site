@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element = {<Homepage/>}/>
             <Route path="/Homepage" element = {<Homepage/>}/>
-            <Route path="/Servant/:name" element = {<ServantPage/>}/>
+            <Route path="/Servant/:id" element = {<ServantPage/>}/>
           </Routes>
     </Context.Provider>
   );
