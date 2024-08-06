@@ -42,7 +42,7 @@ function ServantTable(){
                 Header: "Name",
                 accessor: "name",
                 Cell: ({ row }) => {
-                    const { name, id } = row.original; // Ensure the ID is available in your data
+                    const { name, id } = row.original; 
                     return (
                         <Link className="servantLink" to={`/Servant/${id}`}>
                             {name}

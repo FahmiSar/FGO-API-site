@@ -22,6 +22,7 @@ html, body{
 }
 
 .content{
+  max-height: 100vh;
   overflow-y: auto;
 }
 
@@ -131,6 +132,11 @@ thead th{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/*going to need to use this for responsive design*/
+.rarity-stars{
+  font-size: 24px;
 }
 
 .ascensionButton{

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import Description from "./Description";
+
 function Ascension({ servant }) {
 	const ascensionImages = servant.extraAssets.charaGraph.ascension;
     const costumeImages = servant.extraAssets.charaGraph.costume || {};
@@ -12,12 +14,17 @@ function Ascension({ servant }) {
 	const [currentImage, setCurrentImage] = useState(
 		Object.keys(ascensionImages)[0]
 	);
+
+	const convertRarityToStars = (rarity) => {
+        return "⭐".repeat(rarity)
+    };
     
 
 	return (
 		<div className="characterBanner">
-			<div>description</div>
+			<Description servant = {servant}/>
 			<div className = "pictureContainer">
+				<p className = "rarity-stars">{convertRarityToStars(servant.rarity)}</p>
 				<div>
 					{combinedImageArray.map((item, index) => (
                         
@@ -30,7 +37,11 @@ function Ascension({ servant }) {
 						</button>
 					))}
 				</div>
-				<div>
+				{/**The width for the div changes the size of the img without the weird
+				 * aspect ratio changing the width of the img does 
+				 * I'll need a className or something when I work on responsive design
+				 */}
+				<div style = {{width: "85%"}}>
 					<img
 						className="ascensionPicture"
                         src={combinedImageArray.find(item => item.key === currentImage)?.value}
