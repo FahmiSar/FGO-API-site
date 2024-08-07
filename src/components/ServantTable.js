@@ -4,16 +4,9 @@ import { useTable } from "react-table";
 import {Link} from "react-router-dom";
 
 function ServantTable(){
-    const {activeLabel, servant_classes} = useContext(Context);
-    const [servantInfo, setServantInfo] = useState([]);
-
-    /* 
-        I don't think isLoading actually serves a purpose. I was going to make 
-        it do something but haven't gotten to it yet
-    */
-   
-    const [isLoading, setIsLoading] = useState(true);
-
+    const {activeLabel, setActiveLabel} = useContext(Context);
+    const [servantInfo, setServantInfo] = useState([]);   
+    const [loading, setLoading] = useState(true);
 
     useEffect(
         () => {
@@ -21,11 +14,11 @@ function ServantTable(){
             .then(response => response.json())
             .then(data => {
                 setServantInfo(data);
-                setIsLoading(false);
+                setLoading(false);
             })
             .catch(error => {
                 console.error("Error fetching data:", error);
-                setIsLoading(false);
+                setLoading(false);
             })
         },
         []
@@ -96,6 +89,8 @@ function ServantTable(){
         data: filteredServants,
     });
 
+
+    if (loading) return <div>Loading...</div>;
 
     return (
         <div className = "data-div">

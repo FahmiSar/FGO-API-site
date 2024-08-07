@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import Tabs from "./Tabs";
 
 function Description({ servant }) {
-	const [activeLabel, setActiveLabel] = useState(null);
+	const [activeSkill, setActiveSkill] = useState(null);
 
 	const handleClick = (skill) => {
-		setActiveLabel(skill);
+		setActiveSkill(skill);
 	};
 
 	return (
@@ -24,12 +24,40 @@ function Description({ servant }) {
 			<p>Instant Death Chance: {servant.instantDeathChance}</p>
 
 			<h2>Active Skills</h2>
-			<Tabs
-                tabs = {servant.skills}
-                activeTab = {activeLabel}
-                onClick = {handleClick}
-                containerClass= "skill-container"
-            />
+			<div className="skill-details-div">
+				<Tabs
+					tabs={servant.skills}
+					activeTab={activeSkill}
+					onClick={handleClick}
+					containerClass="skill-container"
+				/>
+
+				{activeSkill && typeof activeSkill === "object" && (
+					<div>
+						<table className = "skill-detail-table">
+							<tbody>
+								<tr>
+									<td className = "skill-header">
+                                        <div className = "skill-icon-wrapper">
+                                            <img className = "skill-icon" src = {activeSkill.icon} alt = ""/>
+                                        </div>
+                                        <div className = "skill-name-wrapper">
+                                            <p>{activeSkill.name}</p>
+                                        </div>
+                                    </td>
+								</tr>
+                                <tr>
+                                    <td>
+                                        <div className = "skill-detail-wrapper">
+                                            <p>{activeSkill.detail}</p>
+                                        </div>
+                                    </td>
+                                </tr>
+							</tbody>
+						</table>
+					</div>
+				)}
+			</div>
 		</div>
 	);
 }

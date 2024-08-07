@@ -27,9 +27,7 @@ html, body{
 }
 
 
-/*ClassHeader.js CSS
-  Description.js CSS (I.e selector banners
-*/
+/*Tabs.js CSS*/
 .tabs-container {
   background-color: blue;
   width: 80%;
@@ -41,7 +39,7 @@ html, body{
 .skill-container{
   width: 100%;
   padding: 10px;
-  margin: auto 10px;
+  margin: 0;
 }
 
 .tabs{
@@ -61,6 +59,13 @@ html, body{
 
 .label{
   padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+}
+
+.label:hover{
+  background-color: rgb(51, 114, 251);
 }
 
 .label.active{
@@ -72,6 +77,38 @@ html, body{
   color: white;
   padding: 10px;
   text-decoration: none;
+}
+
+
+/*Description.js CSS for skill table*/
+.skill-details-div{
+  margin: 20px 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.skill-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-icon-wrapper{
+  margin-right: 10px;
+}
+
+.skill-icon{
+  width: 50%;
+}
+
+.skill-name-wrapper{
+  text-align: left;
+  display: flex;
+  flex-grow: 1;
+}
+
+.skill-detail-wrapper p{
+  margin: 10px 0 0 0;
 }
 
 
@@ -152,9 +189,7 @@ html, body{
 .ascensionButton{
   margin-right: 10px;
   margin-bottom: 10px;
-
   padding: 10px;
-
   border-radius: 4px;
   cursor: pointer;
   border: none;
@@ -174,5 +209,4 @@ html, body{
 .ascensionPicture{
   width: 100%;
 }
-
 
