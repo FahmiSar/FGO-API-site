@@ -27,15 +27,24 @@ html, body{
 }
 
 
-/*ClassHeader.js CSS*/
-.class-tabs-container {
+/*ClassHeader.js CSS
+  Description.js CSS (I.e selector banners
+*/
+.tabs-container {
+  background-color: blue;
   width: 80%;
   max-width: 1200px; 
   padding: 20px; 
   margin: 30px auto; 
 }
 
-.class-tabs{
+.skill-container{
+  width: 100%;
+  padding: 10px;
+  margin: auto 10px;
+}
+
+.tabs{
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -46,7 +55,7 @@ html, body{
   align-items: center;
 }
 
-.tabs{
+.tab{
   margin: 5px;
 }
 
@@ -86,7 +95,7 @@ html, body{
   text-decoration: none;
 }
 
-table{
+.servant-table{
   width: 100%;
   background-color: lightblue;
   padding: 0;
@@ -96,17 +105,18 @@ table{
   border-radius: 5px;
 }
 
-th, td{
+.servant-table th, 
+.servant-table td{
   padding: 15px;
   text-align: center;
   border: 2px solid black;
 }
 
-td:first-child{
+.servant-table td:first-child{
   width: 10%;
 }
 
-thead th{
+.servant-table thead th{
   background-color: rgb(95, 149, 167);
 }
 
@@ -164,4 +174,5 @@ thead th{
 .ascensionPicture{
   width: 100%;
 }
+
 

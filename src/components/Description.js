@@ -1,48 +1,37 @@
-import React, {useMemo} from "react";
-import {useTable} from "react-table";
+import React, { useState } from "react";
 
+import Tabs from "./Tabs";
 
-function Description({ servant }){
+function Description({ servant }) {
+	const [activeLabel, setActiveLabel] = useState(null);
 
-    const columns = useMemo(
-        () => [
-            {
-                accessor: "icon",
-                Cell: ({ value }) => <img className = "skill-icon" src = {value} alt = "icon of skill"/>
-            },
-            {
-                accessor: "name"
-            },
-            {
-                accessor: "detail"
-            }
-        ],
-        []
-    );
+	const handleClick = (skill) => {
+		setActiveLabel(skill);
+	};
 
-    const data = useMemo(() => servant.skills, [servant.skills]);
+	return (
+		<div>
+			<h1>{servant.name}</h1>
+			<p>
+				Base Atk: {servant.atkBase} | Max Atk {servant.atkMax}
+			</p>
+			<p>
+				Base Hp: {servant.hpBase} | Max Hp: {servant.hpMax}
+			</p>
+			<p>Gender: {servant.gender}</p>
+			<p>Star Absorption: {servant.starAbsorb}</p>
+			<p>Star Generation: {servant.starGen}</p>
+			<p>Instant Death Chance: {servant.instantDeathChance}</p>
 
-    const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTable({
-        columns,
-        data
-    })
-
-
-    return(
-        <div>
-            <h1>{servant.name}</h1>
-            <p>Base Atk: {servant.atkBase} | Max Atk {servant.atkMax}</p>
-            <p>Base Hp: {servant.hpBase} | Max Hp: {servant.hpMax}</p>
-            <p>Gender: {servant.gender}</p>
-            <p>Star Absorption: {servant.starAbsorb}</p>
-            <p>Star Generation: {servant.starGen}</p>
-            <p>Instant Death Chance: {servant.instantDeathChance}</p>
-            
-            <h2>Skills</h2>
-
-
-        </div>
-    );
+			<h2>Active Skills</h2>
+			<Tabs
+                tabs = {servant.skills}
+                activeTab = {activeLabel}
+                onClick = {handleClick}
+                containerClass= "skill-container"
+            />
+		</div>
+	);
 }
 
 export default Description;

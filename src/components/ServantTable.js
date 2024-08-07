@@ -100,7 +100,7 @@ function ServantTable(){
     return (
         <div className = "data-div">
             {filteredServants.length > 0 ? (
-                <table  {...getTableProps()}>
+                <table className = "servant-table" {...getTableProps()}>
                     <thead>
                         {headerGroups.map(headerGroup => (
                             <tr {...headerGroup.getHeaderGroupProps()}>

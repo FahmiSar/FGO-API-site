@@ -1,6 +1,8 @@
 import React, {useState, useContext} from "react";
 import { Context } from "../App"; 
 
+import Tabs from "./Tabs";
+
 function ClassHeader(){
     const {activeLabel, setActiveLabel} = useContext(Context);
     const {servant_classes} = useContext(Context);
@@ -10,21 +12,12 @@ function ClassHeader(){
     };
 
     return(
-        <div className="class-tabs-container" style={{ backgroundColor: 'blue' }}>
-            <ul className = "class-tabs">
-                {servant_classes.map((tab) => (
-                    <li key={tab} className ="tabs">
-                        {/*below this div line is equal to setting the div to have className = "label active" or className = "label" */}
-                        <div className={`label ${activeLabel === tab ? "active" : ""}`}>
-                            <a href={`#${tab}`} onClick = {() => handleClick(tab)}>
-                                {tab.replace('_', ' ')}
-                            </a>
-                        </div>
-                    </li>
-                ))}
-
-            </ul>
-        </div>
+        <Tabs
+            tabs = {servant_classes}
+            activeTab = {activeLabel}
+            onClick = {handleClick}
+            containerClass = ""
+        />
     );
 }
 
