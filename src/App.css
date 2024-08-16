@@ -37,7 +37,7 @@ html, body{
 }
 
 .skill-container{
-  width: 100%;
+  width: 90%;
   padding: 10px;
   margin: 0;
 }
@@ -78,39 +78,6 @@ html, body{
   padding: 10px;
   text-decoration: none;
 }
-
-
-/*Description.js CSS for skill table*/
-.skill-details-div{
-  margin: 20px 10px;
-  width: 100%;
-  max-width: 500px;
-}
-
-.skill-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.skill-icon-wrapper{
-  margin-right: 10px;
-}
-
-.skill-icon{
-  width: 50%;
-}
-
-.skill-name-wrapper{
-  text-align: left;
-  display: flex;
-  flex-grow: 1;
-}
-
-.skill-detail-wrapper p{
-  margin: 10px 0 0 0;
-}
-
 
 /*ServantTable.js CSS*/
 .data-div{
@@ -165,11 +132,11 @@ html, body{
   border-radius: 8px;
 
   display: flex;
-  justify-content: space-between;
 }
 
 .pictureContainer{
   width: 20%;
+  height: 30%;
   padding: 10px 20px;
   margin: 10px 30px 10px 10px;
   border-radius: 8px;
@@ -208,5 +175,39 @@ html, body{
 
 .ascensionPicture{
   width: 100%;
+}
+
+/*Description.js CSS for skill table*/
+.description-box{
+  width: 80%;
+
+}
+
+.skill-details-div{
+  margin: 20px 10px;
+}
+
+.skill-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-icon-wrapper{
+  margin-right: 10px;
+}
+
+.skill-icon{
+  width: 50%;
+}
+
+.skill-name-wrapper{
+  text-align: left;
+  display: flex;
+  flex-grow: 1;
+}
+
+.skill-detail-wrapper p{
+  margin: 10px 0 0 0;
 }
 
