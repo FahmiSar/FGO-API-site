@@ -1,4 +1,4 @@
-/*ServantTable.js CSS*/
+/*------------ ServantTable.js CSS ---------------*/
 .data-div{
     width: 80%;
     max-width: 1200px; 
@@ -44,14 +44,38 @@
   }
   
   
-  /*Description.js CSS for skill table*/
+  /*----------Description.js-----------*/
   .description-box{
-    width: 80%;
-  
+    width: auto;
   }
-  
+
+  .character-stats{
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .character-stats h1{
+    text-decoration: underline;
+  }
+
+  .stats{
+    background-color: darkgray;
+    padding: 10px;
+    max-width: 525px; /*max width chosen based on my own perference when inspect element was used*/
+    display: grid;
+    grid-template-columns: auto auto;   
+
+  }
+
   .skill-details-div{
     margin: 20px 10px;
+  }
+
+  .skill-details-table{
+    background-color: darkgrey;
+    border: 1px solid red;
+    width: 100%;
+    padding: 10px;
   }
   
   .skill-header{
@@ -76,6 +100,61 @@
   
   .skill-detail-wrapper p{
     margin: 10px 0 0 0;
+  }
+
+  /*-------- Tabs.js CSS ------------*/
+  .tabs-container {
+    background-color: blue;
+    width: 100%;
+    max-width: 1200px; 
+    padding: 20px; 
+    margin: 30px auto; 
+  }
+  
+  .skill-container{
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+
+    /* I have very little faith this line didnt break something else*/
+    margin-bottom: 10px;
+  }
+  
+  .tabs{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tab{
+    margin: 5px;
+  }
+  
+  .label{
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+  }
+  
+  .label:hover{
+    background-color: rgb(51, 114, 251);
+  }
+  
+  .label.active{
+    border-radius: 3px;
+    background-color: rgb(110, 144, 155);
+  }
+  
+  .label a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
   }
   
   

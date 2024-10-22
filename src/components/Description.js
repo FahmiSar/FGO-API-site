@@ -1,108 +1,54 @@
-import React, { useState } from "react";
+import React from "react";
 
-import Tabs from "./Tabs";
 import "./Components.css";
 
 function Description({ servant }) {
-	const [activeSkill, setActiveSkill] = useState(null);
-	const [activeExtraSkill, setActiveExtraSkill] = useState(null);
-	const [extraSkills, setExtraSkills] = useState([]);
 
-	const skillOne = servant.skills.filter((skill) => skill.num === 1);
-	const skillTwo = servant.skills.filter((skill) => skill.num === 2);
-	const skillThree = servant.skills.filter((skill) => skill.num === 3);
+	const attribute = servant.attribute === "human"
+		? "Man" : servant.attribute.charAt(0).toUpperCase() + servant.attribute.slice(1); 
 
-	const initalSkills = [skillOne[0], skillTwo[0], skillThree[0]];
+	const alignment = servant.traits
+				.filter(trait => trait.name.includes("alignment"))
+				.map(trait => trait.name.replace("alignment", " "));
 
-	const handleExtra = (skill) => {
-		setActiveExtraSkill(skill);
-	}
-
-	const handleClick = (skill) => {
-		setActiveSkill(skill);
-
-		const num = skill.num;
-		let extra = [];
-
-		if (num === 1 && skillOne.length > 1) {
-			extra = skillOne.slice(0);
-		} else if(num === 2 && skillTwo.length > 1){
-			extra = skillTwo.slice(0);
-		} else if(num === 3 && skillThree.length > 1){
-			extra = skillThree.slice(0);
-		}
-
-
-		setExtraSkills(extra);
-		setActiveExtraSkill(extra[0] || null);
-	};
-
-	const skillToDisplay = extraSkills.length > 0 && activeExtraSkill ? activeExtraSkill : activeSkill;
 
 	return (
-		<div className = "description-box">
-			<div>
+		<div className="description-box">
+			<div className="character-stats">
 				<h1>{servant.name}</h1>
-				<p>
-					Base Atk: {servant.atkBase} | Max Atk {servant.atkMax}
-				</p>
-				<p>
-					Base Hp: {servant.hpBase} | Max Hp: {servant.hpMax}
-				</p>
-				<p>Gender: {servant.gender}</p>
-				<p>Star Absorption: {servant.starAbsorb}</p>
-				<p>Star Generation: {servant.starGen}</p>
-				<p>Instant Death Chance: {servant.instantDeathChance}</p>
-			</div>
-
-			<div className="skill-details-div">
-			<h2>Active Skills</h2>
-				<Tabs
-					tabs={initalSkills}
-					activeTab={activeSkill}
-					onClick={handleClick}
-					containerClass="skill-container"
-				/>
-
-				{activeSkill && typeof activeSkill === "object" && (
-					<div>
-						{extraSkills.length > 0 && (
-							<Tabs
-								tabs={extraSkills}
-								activeTab={activeExtraSkill}
-								onClick={handleExtra}
-								containerClass="skill-container"
-								showSkillName = {true}
-							/>
-						)}
-
-						<table className="skill-detail-table">
-							<tbody>
-								<tr>
-									<td className="skill-header">
-										<div className="skill-icon-wrapper">
-											<img
-												className="skill-icon"
-												src={skillToDisplay.icon}
-												alt=""
-											/>
-										</div>
-										<div className="skill-name-wrapper">
-											<p>{skillToDisplay.name}</p>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div className="skill-detail-wrapper">
-											<p>{skillToDisplay.detail}</p>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				)}
+				<div className="stats">
+					<p>
+						<b>ID:</b> {servant.collectionNo}
+					</p>
+					<p>
+						<b>Cost:</b> {servant.cost}
+					</p>
+					<p>
+						<b>ATK/Max ATK:</b> {servant.atkBase}{"/"}{servant.atkMax}
+					</p>
+					<p>
+						<b>HP/Max HP:</b> {servant.hpBase}{"/"}{servant.hpMax}
+					</p>
+					{/**
+					 * the line for gender is just taking the first character and making it uppercase so it'll appear
+					 * as Male/Female instead of male/female
+					 */}
+					<p>
+						<b>Alignment:</b> {alignment}
+					</p>
+					<p>
+						<b>Attribute:</b> {attribute}
+					</p>
+					<p>
+						<b>Star Absorption:</b> {servant.starAbsorb}
+					</p>
+					<p>
+						<b>Star Generation:</b> {servant.starGen}{"%"}
+					</p>
+					<p>
+						<b>Gender:</b> {servant.gender.charAt(0).toUpperCase() + servant.gender.slice(1)}
+					</p>
+				</div>
 			</div>
 		</div>
 	);

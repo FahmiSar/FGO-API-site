@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Description from "./Description";
+import Skills from "./Skills";
 
 function Ascension({ servant }) {
 	const ascensionImages = servant.extraAssets.charaGraph.ascension;
@@ -49,6 +50,7 @@ function Ascension({ servant }) {
 					/>
 				</div>
 			</div>
+			<Skills servant ={servant}/>
 		</div>
 	);
 }
