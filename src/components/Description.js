@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Tabs from "./Tabs";
+import "./Components.css";
 
 function Description({ servant }) {
 	const [activeSkill, setActiveSkill] = useState(null);

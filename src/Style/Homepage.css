@@ -1,0 +1,68 @@
+/*Homepage.js CSS*/
+.container{
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("/images/FGO sky.jpg");
+    background-size: cover;
+    background-position: center bottom;
+  }
+  
+  .content{
+    height: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  
+  
+  /*Tabs.js CSS*/
+  .tabs-container {
+    background-color: blue;
+    width: 80%;
+    max-width: 1200px; 
+    padding: 20px; 
+    margin: 30px auto; 
+  }
+  
+  .skill-container{
+    width: 90%;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .tabs{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tab{
+    margin: 5px;
+  }
+  
+  .label{
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+  }
+  
+  .label:hover{
+    background-color: rgb(51, 114, 251);
+  }
+  
+  .label.active{
+    border-radius: 3px;
+    background-color: rgb(110, 144, 155);
+  }
+  
+  .label a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+  }

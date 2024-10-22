@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import Ascension from "../components/Ascension";
 
+import "../Style/ServantPage.css";
+
 function ServantPage(){
     const {id} = useParams(); // this'll get the "name" part of the URL
     const [servantData, setServantData] = useState(null);

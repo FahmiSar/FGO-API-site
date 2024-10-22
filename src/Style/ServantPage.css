@@ -1,0 +1,52 @@
+/* ServantPage.js CSS */
+.characterBanner{
+    padding: 20px;
+    margin: 30px;
+    background-color: lightgray;
+    border-radius: 8px;
+  
+    display: flex;
+  }
+  
+  .pictureContainer{
+    width: 20%;
+    height: 30%;
+    padding: 10px 20px;
+    margin: 10px 30px 10px 10px;
+    border-radius: 8px;
+    background-color: darkgray;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*going to need to use this for responsive design*/
+  .rarity-stars{
+    font-size: 24px;
+  }
+  
+  .ascensionButton{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ascensionButton:hover{
+    background-color: #e0e0e0;
+  }
+  
+  .ascensionButton.active{
+    background-color: rgb(4, 4, 140);
+    color: white;
+  }
+  
+  .ascensionPicture{
+    width: 100%;
+  }

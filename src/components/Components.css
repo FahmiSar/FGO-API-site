@@ -1,0 +1,81 @@
+/*ServantTable.js CSS*/
+.data-div{
+    width: 80%;
+    max-width: 1200px; 
+    max-height: 450px;
+    padding: 0;
+    margin: 30px auto; 
+  
+    display: flex;
+    justify-content: center;
+  }
+  
+  .servantPicture{
+    width: 100%;
+  }
+  
+  .servantLink{
+    text-decoration: none;
+  }
+  
+  .servant-table{
+    width: 100%;
+    background-color: lightblue;
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
+  .servant-table th, 
+  .servant-table td{
+    padding: 15px;
+    text-align: center;
+    border: 2px solid black;
+  }
+  
+  .servant-table td:first-child{
+    width: 10%;
+  }
+  
+  .servant-table thead th{
+    background-color: rgb(95, 149, 167);
+  }
+  
+  
+  /*Description.js CSS for skill table*/
+  .description-box{
+    width: 80%;
+  
+  }
+  
+  .skill-details-div{
+    margin: 20px 10px;
+  }
+  
+  .skill-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .skill-icon-wrapper{
+    margin-right: 10px;
+  }
+  
+  .skill-icon{
+    width: 50%;
+  }
+  
+  .skill-name-wrapper{
+    text-align: left;
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .skill-detail-wrapper p{
+    margin: 10px 0 0 0;
+  }
+  
+  
