@@ -29,13 +29,11 @@ function ServantPage(){
     if (loading) return <div>Loading...</div>;
 
     return(
-        <>
-            <div className="container">
-                <div className="content">
-                    <Ascension servant = {servantData}/>
-                </div>
+        <div className="container">
+            <div className="content">
+                <Ascension servant = {servantData}/>
             </div>
-        </>
+        </div>
     );
 }
 

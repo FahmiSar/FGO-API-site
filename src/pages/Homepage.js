@@ -6,14 +6,12 @@ import "../Style/Homepage.css";
 function Homepage(){
 
     return(
-        <>
-            <div className="container">
-                <div className="content">
-                    <ClassHeader/>
-                    <ServantTable/>
-                </div>
+        <div className="container">
+            <div className="content">
+                <ClassHeader/>
+                <ServantTable/>
             </div>
-        </>
+        </div>
     );
 }
 

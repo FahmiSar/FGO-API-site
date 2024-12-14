@@ -42,7 +42,7 @@
   .servant-table thead th{
     background-color: rgb(95, 149, 167);
   }
-  
+
   
   /*----------Description.js-----------*/
   .description-box{
@@ -59,12 +59,11 @@
   }
 
   .stats{
-    background-color: darkgray;
+    background-color: darkgrey;
     padding: 10px;
-    max-width: 525px; /*max width chosen based on my own perference when inspect element was used*/
+    max-width: 575px; /*max width chosen based on my own perference when inspect element was used*/
     display: grid;
     grid-template-columns: auto auto;   
-
   }
 
   .skill-details-div{
@@ -73,7 +72,6 @@
 
   .skill-details-table{
     background-color: darkgrey;
-    border: 1px solid red;
     width: 100%;
     padding: 10px;
   }
@@ -100,6 +98,21 @@
   
   .skill-detail-wrapper p{
     margin: 10px 0 0 0;
+  }
+
+  .command-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*
+    The command card pictures have some built in margins
+    dunno how to fix that
+  */
+  .command-card{
+    padding: 0;
+    margin: 0;
   }
 
   /*-------- Tabs.js CSS ------------*/

@@ -22,15 +22,16 @@ function Ascension({ servant }) {
     
 
 	return (
-		<div className="characterBanner">
+		<div className="character-banner">
 			<Description servant = {servant}/>
-			<div className = "pictureContainer">
+			<div className = "picture-container">
 				<p className = "rarity-stars">{convertRarityToStars(servant.rarity)}</p>
+				{/**Buttons to change the ascension artwork */}
 				<div>
 					{combinedImageArray.map((item, index) => (
                         
 						<button
-							className= {`ascensionButton ${item.key === currentImage ? "active" : ''}`}
+							className= {`ascension-button ${item.key === currentImage ? "active" : ''}`}
 							key={item.key}
 							onClick={() => setCurrentImage(item.key)}
 						>
@@ -38,13 +39,9 @@ function Ascension({ servant }) {
 						</button>
 					))}
 				</div>
-				{/**The width for the div changes the size of the img without the weird
-				 * aspect ratio changing the width of the img does 
-				 * I'll need a className or something when I work on responsive design
-				 */}
-				<div style = {{width: "85%"}}>
+				<div className = "ascension-picture-container">
 					<img
-						className="ascensionPicture"
+						className="ascension-picture"
                         src={combinedImageArray.find(item => item.key === currentImage)?.value}
 						alt={`Number ${currentImage}`}
 					/>
