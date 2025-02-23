@@ -2,6 +2,9 @@ import React from "react";
 
 import "../styles/Components.css";
 
+import quickCardImage from "../images/Quick.png";
+import artsCardImage from "../images/Arts.png";
+import busterCardImage from "../images/Buster.png";
 
 function Description({ servant }) {
 
@@ -74,15 +77,15 @@ function Description({ servant }) {
 					 */}
 					{/**Quick Cards */}
 					{Array.from({ length: cardCount.quick}).map((_,index) => (
-						<img className = "command-card" key={index} src={`${process.env.PUBLIC_URL}/images/Quick.png`} alt="Quick Card" />
+						<img className = "command-card" key={index} src={quickCardImage} alt="Quick Card" />
 					))}
 					{/**Arts Cards */}
 					{Array.from({length: cardCount.arts}).map((_,index) =>(
-						<img className = "command-card" key={index} src={`${process.env.PUBLIC_URL}/images/Arts.png`} alt = "Arts Card"/>
+						<img className = "command-card" key={index} src={artsCardImage} alt = "Arts Card"/>
 					))}
 					{/**Buster Cards */}
 					{Array.from({length: cardCount.buster}).map((_,index) =>(
-						<img className = "command-card" key={index} src={`${process.env.PUBLIC_URL}/images/Buster.png`} alt = "Buster Card"/>
+						<img className = "command-card" key={index} src={busterCardImage} alt = "Buster Card"/>
 					))}
 				</div>
 			</div>

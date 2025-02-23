@@ -3,6 +3,7 @@
   box-sizing: border-box;
   height: 100vh;
   overflow: hidden;
+  background-image: url('../images/FGO-sky.jpg');
   background-size: cover;
   background-position: center bottom;
 }
