@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Tabs from "./Tabs";
 
-import "./Components.css";
+import "../styles/Components.css";
 
 function Skills({ servant }) {
 	const [activeSkill, setActiveSkill] = useState(null);

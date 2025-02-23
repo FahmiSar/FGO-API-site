@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Components.css";
+import "../styles/Components.css";
 
 
 function Description({ servant }) {

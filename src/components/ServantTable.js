@@ -3,7 +3,7 @@ import {Context} from "../App";
 import { useTable } from "react-table";
 import {Link} from "react-router-dom";
 
-import "./Components.css";
+import "../styles/Components.css";
 
 function ServantTable(){
     const {activeLabel, setActiveLabel} = useContext(Context);

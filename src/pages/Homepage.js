@@ -1,12 +1,14 @@
 import React from "react";
 import ClassHeader from "../components/ClassHeader";
 import ServantTable from "../components/ServantTable";
-import "../Style/Homepage.css";
+
+import "../styles/Homepage.css";
 
 function Homepage(){
 
     return(
-        <div className="container">
+        <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/FGO-sky.jpg)` }} 
+            className="container">
             <div className="content">
                 <ClassHeader/>
                 <ServantTable/>
