@@ -7,8 +7,8 @@ import "../styles/Homepage.css";
 function Homepage(){
 
     return(
-        <div className="container">
-            <div className="content">
+        <div className="background-container">
+            <div className="homepage-content">
                 <ClassHeader/>
                 <ServantTable/>
             </div>

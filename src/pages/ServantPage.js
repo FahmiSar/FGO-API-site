@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 
-import Ascension from "../components/Ascension";
+import Description from "../components/Description";
+import Skills from "../components/Skills";
+import Portrait from "../components/Portrait";
 
 import "../styles/ServantPage.css";
 
@@ -29,9 +31,11 @@ function ServantPage(){
     if (loading) return <div>Loading...</div>;
 
     return(
-        <div className="container">
-            <div className="content">
-                <Ascension servant = {servantData}/>
+        <div className="background-container">
+            <div className="character-container">
+                <Description servant = {servantData}/>
+                <Portrait servant = {servantData}/>
+                <Skills servant ={servantData}/>
             </div>
         </div>
     );

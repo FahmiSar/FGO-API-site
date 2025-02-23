@@ -11,3 +11,14 @@ html, body{
   overflow: hidden;
 }
 
+.background-container{
+  box-sizing: border-box;
+  height: 100vh;
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-image: url('./images/FGO-sky.jpg');
+  background-size: cover;
+  background-position: center bottom;
+}
